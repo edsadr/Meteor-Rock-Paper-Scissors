@@ -1,0 +1,28 @@
+<head>
+  <title>Rock Paper Scisors - JSConfCO</title>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="navbar-brand" href="/">Rock Paper Scisors</a>
+          <div class="pull-right">
+            {{loginButtons}}      
+          </div> 
+        </div>
+      </div>
+    </div>   
+    <div class="container-fluid">
+      <div class="row-fluid fill">
+        <div id="main-container" class="span8 offset2">
+          {{renderRouter}}
+        </div>
+     </div>
+   </div>
+   <footer>
+    <div class="container">
+      <p class="muted credit"><a href="http://jsconf.co" target="blank">JSConfCO</a>.</p>
+    </div>
+  </footer>
+</body>

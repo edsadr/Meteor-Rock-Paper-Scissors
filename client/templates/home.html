@@ -1,0 +1,47 @@
+<template name="home">
+	<div class="pull-right">
+		{{back_button}}
+		{{create_button}}
+	</div>
+	<h2>New games</h2>
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Game details</th>
+				<th>Actions</th>				
+			</tr>
+		</thead>
+		<tbody>
+			{{#each games}}
+			<tr>
+				<td>{{owner_username}}</td>
+				<td>
+					{{action_button this}}
+				</td>				
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+	<hr/>
+	<h2>Current games</h2>
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Game details</th>
+				<th>Number of battles</th>
+				<th>Actions</th>				
+			</tr>
+		</thead>
+		<tbody>
+			{{#each cgames}}
+			<tr>
+				<td>{{game_name this}}</td>
+				<td>{{total_games}}</td>
+				<td>
+					<button class="btn btn-mini btn-info watch" type="button">Watch</button>
+				</td>				
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</template>
